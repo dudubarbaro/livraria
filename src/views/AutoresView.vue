@@ -48,6 +48,7 @@ export default {
           <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>

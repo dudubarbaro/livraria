@@ -9,27 +9,27 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
+      path: "/login",
       name: "login",
       component: LoginView,
     },
     {
-      path: "/",
+      path: "/editoras",
       name: "editoras",
       component: EditorasView,
     },
     {
-      path: "/",
+      path: "/categorias",
       name: "categorias",
       component: CategoriasView,
     },
     {
-      path: "/",
+      path: "/autores",
       name: "autores",
       component: AutoresView,
     },
     {
-      path: "/",
+      path: "/livros",
       name: "livros",
       component: LivrosView,
     },

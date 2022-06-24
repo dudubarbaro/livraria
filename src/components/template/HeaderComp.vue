@@ -1,8 +1,6 @@
 <template>
   <header>
     <div>
-      <span> <RouterLink to="/">Home</RouterLink> </span>
-      <span>|</span>
       <span> <RouterLink to="/editoras">Editoras</RouterLink> </span>
       <span>|</span>
       <span> <RouterLink to="/categorias">Categorias</RouterLink> </span>
@@ -12,7 +10,7 @@
       <span> <RouterLink to="/livros">Livros</RouterLink> </span>
     </div>
     <div>
-      <span>Login</span>
+      <span> <RouterLink to="/login">Login</RouterLink> </span>
     </div>
   </header>
 </template>

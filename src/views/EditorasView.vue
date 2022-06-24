@@ -49,15 +49,15 @@ export default {
             <th>ID</th>
             <th>Nome</th>
             <th>Site</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="editoras in editoras" :key="editoras.id">
             <td>{{ editoras.id }}</td>
             <td>{{ editoras.nome }}</td>
-            <td>
-              <button @click="excluir(editoras)">Excluir</button>
-            </td>
+            <td>www.</td>
+            <td><button @click="excluir(editoras)">Excluir</button></td>
           </tr>
         </tbody>
       </table>
@@ -120,6 +120,6 @@ table tr td {
 }
 
 table tr:nth-child(odd) {
-  background-color: black;
+    background-color: aliceblue;
 }
 </style>
