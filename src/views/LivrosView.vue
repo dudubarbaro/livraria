@@ -40,7 +40,11 @@ export default {
     </div>
     <div class="form-input">
       <input type="text" v-model="novo_livro" />
+<<<<<<< HEAD
       <button @click="salvar">Adicionar</button>
+=======
+      <button @click="salvar">Salvar</button>
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
     </div>
     <div class="list-livros">
       <table>
@@ -55,6 +59,7 @@ export default {
           </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
           <tr v-for="livros in livros" :key="livros.id">
             <td>{{ livros.id }}</td>
             <td>{{ livros.nome }}</td>
@@ -64,6 +69,13 @@ export default {
             <td>
               <button class="delete" @click="excluir(livros)">Excluir</button>
             </td>
+=======
+          <tr v-for="editoras in editoras" :key="editoras.id">
+            <td>{{ editoras.id }}</td>
+            <td>{{ editoras.nome }}</td>
+            <td>978 – 85 – 333 – 0227 – 3</td>
+            <td><button @click="excluir(editoras)">Excluir</button></td>
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
           </tr>
         </tbody>
       </table>
@@ -72,6 +84,7 @@ export default {
 </template>
 
 <style>
+<<<<<<< HEAD
 .delete {
   background-color: #14213d;
   color: #fca311;
@@ -80,6 +93,8 @@ export default {
   width: 50%;
   height: 30px;
 }
+=======
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
 .title {
   margin-top: 2rem;
   display: flex;
@@ -103,28 +118,46 @@ export default {
   margin-left: 1%;
   width: 20%;
   height: 40px;
+<<<<<<< HEAD
   border: 1px solid #fca311;
   border-radius: 10px;
   background-color: #fca311;
+=======
+  border: 1px solid rgb(36, 127, 65);
+  border-radius: 10px;
+  background-color: rgb(36, 127, 65);
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .list-livros {
+=======
+.list-editoras {
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   display: flex;
   justify-content: center;
 }
 
 table {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 50%;
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   margin: 2% auto;
   border-collapse: collapse;
 }
 
 table tr th {
   border: 1px solid #ccc;
+<<<<<<< HEAD
   padding: 20px;
+=======
+  padding: 10px;
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   font-weight: bold;
 }
 

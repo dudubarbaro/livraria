@@ -1,8 +1,6 @@
 <template>
   <header>
     <div>
-      <span> <RouterLink to="/">Home</RouterLink> </span>
-      <span>|</span>
       <span> <RouterLink to="/editoras">Editoras</RouterLink> </span>
       <span>|</span>
       <span> <RouterLink to="/categorias">Categorias</RouterLink> </span>

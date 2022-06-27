@@ -4,11 +4,11 @@ export default {
   data() {
     return {
       categorias: [
-        { id: "8ae6623d-5462-4774-b5e1-e263c5d2d367", nome: "Categoria 1" },
-        { id: "1f659d91-17b5-40da-b5fb-dbffa5664e27", nome: "Categoria 2" },
-        { id: "d5a59ada-da1d-47a2-9a6e-e99964df9571", nome: "Categoria 3" },
-        { id: "2311c938-42fa-4661-a3fc-9ba664a30f6e", nome: "Categoria 4" },
-        { id: "6f58a76b-0ea0-4bca-8d93-296c7d69685c", nome: "Categoria 5" },
+        { id: "8ae6623d-5462-4774-b5e1-e263c5d2d367", nome: "Gênero A" },
+        { id: "1f659d91-17b5-40da-b5fb-dbffa5664e27", nome: "Gênero B" },
+        { id: "d5a59ada-da1d-47a2-9a6e-e99964df9571", nome: "Gênero C" },
+        { id: "2311c938-42fa-4661-a3fc-9ba664a30f6e", nome: "Gênero D" },
+        { id: "6f58a76b-0ea0-4bca-8d93-296c7d69685c", nome: "Gênero E" },
       ],
       nova_categoria: "",
     };

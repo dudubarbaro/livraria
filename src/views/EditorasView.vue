@@ -57,9 +57,13 @@ export default {
             <td>{{ editoras.id }}</td>
             <td>{{ editoras.nome }}</td>
             <td>www.</td>
+<<<<<<< HEAD
             <td>
               <button class="delete" @click="excluir(editoras)">Excluir</button>
             </td>
+=======
+            <td><button @click="excluir(editoras)">Excluir</button></td>
+>>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
           </tr>
         </tbody>
       </table>
@@ -130,6 +134,6 @@ table tr td {
 }
 
 table tr:nth-child(odd) {
-  background-color: black;
+    background-color: aliceblue;
 }
 </style>
