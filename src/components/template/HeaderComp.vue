@@ -12,7 +12,7 @@
       <span> <RouterLink to="/livros">Livros</RouterLink> </span>
     </div>
     <div>
-      <span>Login</span>
+      <span> <RouterLink to="/login">Login</RouterLink> </span>
     </div>
   </header>
 </template>
@@ -25,7 +25,7 @@ header span {
 header {
   background-color: #14213d;
   height: 15%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding-left: 2rem;
   color: #fca311;
   display: flex;

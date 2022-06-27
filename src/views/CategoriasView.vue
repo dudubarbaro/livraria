@@ -20,7 +20,7 @@ export default {
         const novo_id = uuidv4();
         this.categorias.push({
           id: novo_id,
-          nome: this.nova_categorias,
+          nome: this.nova_categoria,
         });
         this.nova_categoria = "";
       }
@@ -40,7 +40,7 @@ export default {
     </div>
     <div class="form-input">
       <input type="text" v-model="nova_categoria" />
-      <button @click="salvar">Salvar</button>
+      <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-categorias">
       <table>
@@ -48,6 +48,7 @@ export default {
           <tr>
             <th>ID</th>
             <th>Descrição</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -55,7 +56,7 @@ export default {
             <td>{{ categorias.id }}</td>
             <td>{{ categorias.nome }}</td>
             <td>
-              <button @click="excluir(categorias)">Excluir</button>
+              <button class="delete" @click="excluir(categorias)">Excluir</button>
             </td>
           </tr>
         </tbody>
@@ -88,9 +89,9 @@ export default {
   margin-left: 1%;
   width: 20%;
   height: 40px;
-  border: 1px solid rgb(36, 127, 65);
+  border: 1px solid #fca311;
   border-radius: 10px;
-  background-color: rgb(36, 127, 65);
+  background-color: #fca311;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -116,6 +117,14 @@ table tr th {
 table tr td {
   border: 1px solid #ccc;
   padding: 10px;
+}
+.delete {
+  background-color: #14213d;
+  color: #fca311;
+  border: #fca311;
+  border-radius: 20px;
+  width: 50%;
+  height: 30px;
 }
 
 table tr:nth-child(odd) {

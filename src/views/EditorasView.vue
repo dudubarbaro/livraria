@@ -40,7 +40,7 @@ export default {
     </div>
     <div class="form-input">
       <input type="text" v-model="nova_editora" />
-      <button @click="salvar">Salvar</button>
+      <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-editoras">
       <table>
@@ -49,14 +49,16 @@ export default {
             <th>ID</th>
             <th>Nome</th>
             <th>Site</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="editoras in editoras" :key="editoras.id">
             <td>{{ editoras.id }}</td>
             <td>{{ editoras.nome }}</td>
+            <td>www.</td>
             <td>
-              <button @click="excluir(editoras)">Excluir</button>
+              <button class="delete" @click="excluir(editoras)">Excluir</button>
             </td>
           </tr>
         </tbody>
@@ -66,6 +68,14 @@ export default {
 </template>
 
 <style>
+.delete {
+  background-color: #14213d;
+  color: #fca311;
+  border: #fca311;
+  border-radius: 20px;
+  width: 50%;
+  height: 30px;
+}
 .title {
   margin-top: 2rem;
   display: flex;
@@ -89,9 +99,9 @@ export default {
   margin-left: 1%;
   width: 20%;
   height: 40px;
-  border: 1px solid rgb(36, 127, 65);
+  border: 1px solid #fca311;
   border-radius: 10px;
-  background-color: rgb(36, 127, 65);
+  background-color: #fca311;
   color: white;
   font-weight: bold;
   cursor: pointer;

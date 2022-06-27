@@ -40,7 +40,7 @@ export default {
     </div>
     <div class="form-input">
       <input type="text" v-model="novo_autor" />
-      <button @click="salvar">Salvar</button>
+      <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-autores">
       <table>
@@ -48,6 +48,7 @@ export default {
           <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -55,7 +56,7 @@ export default {
             <td>{{ autores.id }}</td>
             <td>{{ autores.nome }}</td>
             <td>
-              <button @click="excluir(autores)">Excluir</button>
+              <button class="delete" @click="excluir(autores)">Excluir</button>
             </td>
           </tr>
         </tbody>
@@ -88,9 +89,9 @@ export default {
   margin-left: 1%;
   width: 20%;
   height: 40px;
-  border: 1px solid rgb(36, 127, 65);
+  border: 1px solid #fca311;
   border-radius: 10px;
-  background-color: rgb(36, 127, 65);
+  background-color: #fca311;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -120,5 +121,13 @@ table tr td {
 
 table tr:nth-child(odd) {
   background-color: black;
+}
+.delete {
+  background-color: #14213d;
+  color: #fca311;
+  border: #fca311;
+  border-radius: 20px;
+  width: 50%;
+  height: 30px;
 }
 </style>
