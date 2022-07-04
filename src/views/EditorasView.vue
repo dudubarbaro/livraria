@@ -4,13 +4,14 @@ export default {
   data() {
     return {
       editoras: [
-        { id: "8ae6623d-5462-4774-b5e1-e263c5d2d367", nome: "Editora 1" },
-        { id: "1f659d91-17b5-40da-b5fb-dbffa5664e27", nome: "Editora 2" },
-        { id: "d5a59ada-da1d-47a2-9a6e-e99964df9571", nome: "Editora 3" },
-        { id: "2311c938-42fa-4661-a3fc-9ba664a30f6e", nome: "Editora 4" },
-        { id: "6f58a76b-0ea0-4bca-8d93-296c7d69685c", nome: "Editora 5" },
+        {
+          id: "8ae6623d-5462-4774-b5e1-e263c5d2d367",
+          nome: "Editora 1",
+          site: "www.",
+        },
       ],
       nova_editora: "",
+      novo_site: "",
     };
   },
 
@@ -21,8 +22,10 @@ export default {
         this.editoras.push({
           id: novo_id,
           nome: this.nova_editora,
+          site: this.novo_site,
         });
         this.nova_editora = "";
+        this.novo_site = "";
       }
     },
     excluir(editoras) {
@@ -39,7 +42,8 @@ export default {
       <h2>Gerenciamento de Editoras</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="nova_editora" />
+      <input type="text" v-model="nova_editora" placeholder="editora..." />
+      <input type="text" v-model="novo_site" placeholder="site..." />
       <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-editoras">
@@ -56,14 +60,10 @@ export default {
           <tr v-for="editoras in editoras" :key="editoras.id">
             <td>{{ editoras.id }}</td>
             <td>{{ editoras.nome }}</td>
-            <td>www.</td>
-<<<<<<< HEAD
+            <td>{{ editoras.site }}</td>
             <td>
               <button class="delete" @click="excluir(editoras)">Excluir</button>
             </td>
-=======
-            <td><button @click="excluir(editoras)">Excluir</button></td>
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
           </tr>
         </tbody>
       </table>
@@ -134,6 +134,6 @@ table tr td {
 }
 
 table tr:nth-child(odd) {
-    background-color: aliceblue;
+  background-color: #ccc;
 }
 </style>

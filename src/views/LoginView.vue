@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .main {
   margin-top: 3%;
   margin-left: 35%;

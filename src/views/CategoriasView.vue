@@ -5,10 +5,6 @@ export default {
     return {
       categorias: [
         { id: "8ae6623d-5462-4774-b5e1-e263c5d2d367", nome: "Gênero A" },
-        { id: "1f659d91-17b5-40da-b5fb-dbffa5664e27", nome: "Gênero B" },
-        { id: "d5a59ada-da1d-47a2-9a6e-e99964df9571", nome: "Gênero C" },
-        { id: "2311c938-42fa-4661-a3fc-9ba664a30f6e", nome: "Gênero D" },
-        { id: "6f58a76b-0ea0-4bca-8d93-296c7d69685c", nome: "Gênero E" },
       ],
       nova_categoria: "",
     };
@@ -39,7 +35,7 @@ export default {
       <h2>Gerenciamento de Categorias</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="nova_categoria" />
+      <input type="text" v-model="nova_categoria" placeholder="categoria..." />
       <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-categorias">
@@ -56,7 +52,9 @@ export default {
             <td>{{ categorias.id }}</td>
             <td>{{ categorias.nome }}</td>
             <td>
-              <button class="delete" @click="excluir(categorias)">Excluir</button>
+              <button class="delete" @click="excluir(categorias)">
+                Excluir
+              </button>
             </td>
           </tr>
         </tbody>
@@ -66,6 +64,9 @@ export default {
 </template>
 
 <style>
+.container {
+  width: 100%;
+}
 .title {
   margin-top: 2rem;
   display: flex;
@@ -103,7 +104,7 @@ export default {
 }
 
 table {
-  width: 50%;
+  width: 100%;
   margin: 2% auto;
   border-collapse: collapse;
 }
@@ -128,6 +129,6 @@ table tr td {
 }
 
 table tr:nth-child(odd) {
-  background-color: black;
+  background-color: #ccc;
 }
 </style>

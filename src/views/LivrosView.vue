@@ -4,13 +4,18 @@ export default {
   data() {
     return {
       livros: [
-        { id: "8ae6623d-5462-4774-b5e1-e263c5d2d367", nome: "Livro 1" },
-        { id: "1f659d91-17b5-40da-b5fb-dbffa5664e27", nome: "Livro 2" },
-        { id: "d5a59ada-da1d-47a2-9a6e-e99964df9571", nome: "Livro 3" },
-        { id: "2311c938-42fa-4661-a3fc-9ba664a30f6e", nome: "Livro 4" },
-        { id: "6f58a76b-0ea0-4bca-8d93-296c7d69685c", nome: "Livro 5" },
+        {
+          id: "8ae6623d-5462-4774-b5e1-e263c5d2d367",
+          nome: "Livro 1",
+          isbn: "978-3-16-148410-0",
+          quantidade: "1",
+          preco: "29,99",
+        },
       ],
       novo_livro: "",
+      novo_isbn: "",
+      nova_qntd: "",
+      novo_preco: "",
     };
   },
 
@@ -21,8 +26,14 @@ export default {
         this.livros.push({
           id: novo_id,
           nome: this.novo_livro,
+          isbn: this.novo_isbn,
+          quantidade: this.nova_qntd,
+          preco: this.novo_preco,
         });
-        this.novo_livro = "";
+        (this.novo_livro = ""),
+          (this.novo_isbn = ""),
+          (this.nova_qntd = ""),
+          (this.novo_preco = "");
       }
     },
     excluir(livros) {
@@ -39,12 +50,11 @@ export default {
       <h2>Gerenciamento de Livros</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="novo_livro" />
-<<<<<<< HEAD
+      <input type="text" v-model="novo_livro" placeholder="título..." />
+      <input type="text" v-model="novo_isbn" placeholder="isbn..." />
+      <input type="number" v-model="nova_qntd" placeholder="quantidade..." />
+      <input type="text" v-model="novo_preco" placeholder="preço..." />
       <button @click="salvar">Adicionar</button>
-=======
-      <button @click="salvar">Salvar</button>
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
     </div>
     <div class="list-livros">
       <table>
@@ -59,23 +69,15 @@ export default {
           </tr>
         </thead>
         <tbody>
-<<<<<<< HEAD
           <tr v-for="livros in livros" :key="livros.id">
             <td>{{ livros.id }}</td>
             <td>{{ livros.nome }}</td>
-            <td>978-3-16-148410-0</td>
-            <td>1</td>
-            <th>R$29,99</th>
+            <td>{{ livros.isbn }}</td>
+            <td>{{ livros.quantidade }}</td>
+            <th>{{ livros.preco }}</th>
             <td>
               <button class="delete" @click="excluir(livros)">Excluir</button>
             </td>
-=======
-          <tr v-for="editoras in editoras" :key="editoras.id">
-            <td>{{ editoras.id }}</td>
-            <td>{{ editoras.nome }}</td>
-            <td>978 – 85 – 333 – 0227 – 3</td>
-            <td><button @click="excluir(editoras)">Excluir</button></td>
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
           </tr>
         </tbody>
       </table>
@@ -84,7 +86,6 @@ export default {
 </template>
 
 <style>
-<<<<<<< HEAD
 .delete {
   background-color: #14213d;
   color: #fca311;
@@ -93,8 +94,6 @@ export default {
   width: 50%;
   height: 30px;
 }
-=======
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
 .title {
   margin-top: 2rem;
   display: flex;
@@ -107,7 +106,7 @@ export default {
 }
 
 .form-input input {
-  width: 60%;
+  width: 20%;
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -116,48 +115,30 @@ export default {
 
 .form-input button {
   margin-left: 1%;
-  width: 20%;
+  width: 10%;
   height: 40px;
-<<<<<<< HEAD
-  border: 1px solid #fca311;
-  border-radius: 10px;
-  background-color: #fca311;
-=======
   border: 1px solid rgb(36, 127, 65);
   border-radius: 10px;
   background-color: rgb(36, 127, 65);
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .list-livros {
-=======
-.list-editoras {
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   display: flex;
   justify-content: center;
 }
 
 table {
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 50%;
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   margin: 2% auto;
   border-collapse: collapse;
 }
 
 table tr th {
   border: 1px solid #ccc;
-<<<<<<< HEAD
   padding: 20px;
-=======
-  padding: 10px;
->>>>>>> 73f9fa9ab5070b818bda7adf237f2ab2f9297e21
   font-weight: bold;
 }
 
